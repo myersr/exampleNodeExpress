@@ -1,0 +1,16 @@
+{
+  "name": "example-node-express",
+  "version": "0.0.1",
+  "description": "Simple express app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "express",
+    "example",
+    "node"
+  ],
+  "author": "Roy Myers",
+  "license": "MIT"
+}
