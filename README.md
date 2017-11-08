@@ -25,7 +25,7 @@ Routes are as followed
 Uses mocha for testing. Mocha executes the tests in `test.js`. 
 Currently only checks that
 1. '/' returns a status code of 200
-2. '/' returns the correct response body exactly. 
+2. '/' returns the correct response body exactly.  
 Run with `npm test` and the dependencies are saved in *devDependencies*.
 
 ### Fire wall 
