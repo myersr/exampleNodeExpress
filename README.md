@@ -21,6 +21,17 @@ Routes are as followed
   submit target of the form on index.html. Takes in json data with one field. {"field1":"some text"}
 ```
 
+### Running
+I am hoping to implement several different use cases for deployment. The hope for this repo is to create a simple lightweight app to be used for all forms of testing. I will update the options as they are added below. Feel free to fork or create a pull request if you have an option to add.
+* pm2 ~ node app manager
+  * Install/Update:
+    * npm install pm2@latest -g; pm2 update
+  * Run:
+    * The process.json file defines the application and is suitable for deployment.
+      * `pm2 start process.json --env production`
+    * To start for testing:
+      * `pm2 start index.js --name "test-app"`
+
 ### Testing
 Uses mocha for testing. Mocha executes the tests in `test.js`. 
 Currently only checks that
