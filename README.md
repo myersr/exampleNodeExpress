@@ -29,6 +29,8 @@ I am hoping to implement several different use cases for deployment. The hope fo
   * Run:
     * The process.json file defines the application and is suitable for deployment.
       * `pm2 start process.json --env production`
+      * If Jenkins to deploy. Add line `BUILD_ID=dontKillMe` before the start shell command to not have Jenkins destroy the process.
+        * I don't know why but Jenkins kills every process that it creates. Seems the opposite behavior that you would expect from an automated deployment service. [More here](https://wiki.jenkins.io/display/JENKINS/ProcessTreeKiller)
     * To start for testing:
       * `pm2 start index.js --name "test-app"`
 
