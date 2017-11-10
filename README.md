@@ -34,11 +34,11 @@ I am hoping to implement several different use cases for deployment. The hope fo
     * To start for testing:
       * `pm2 start index.js --name "test-app"`
 * docker
-  * Build locally
+  * Either build locally
     * `sudo docker build . -t example-node-express`
-  * Pull from registry
+  * Or pull from registry
     * `docker pull docker.optum.com/rmyers19/example-node-express`
-  * To run after either above
+  * Then to run after a build or pull
     * `sudo docker run -d -p 8001:8181 --name express-docker docker.optum.com/rmyers19/example-node-express`
 
 ### Testing
