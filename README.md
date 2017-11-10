@@ -50,4 +50,4 @@ Currently only checks that
 Run with `npm test` and the dependencies are saved in *devDependencies*.
 
 ### Fire wall 
-For Cent 7 to open up the firewall `sudo firewall-cmd --zone=public --add-port=8181/tcp --permanent` && `firewall-cmd --reload` to save.
+For Centos 7 to open up the firewall `sudo firewall-cmd --zone=public --add-port=8181/tcp --permanent` && `firewall-cmd --reload` to save.
