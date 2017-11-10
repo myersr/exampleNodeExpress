@@ -33,6 +33,13 @@ I am hoping to implement several different use cases for deployment. The hope fo
         * I don't know why but Jenkins kills every process that it creates. Seems the opposite behavior that you would expect from an automated deployment service. [More here](https://wiki.jenkins.io/display/JENKINS/ProcessTreeKiller)
     * To start for testing:
       * `pm2 start index.js --name "test-app"`
+* docker
+  * Build locally
+    * `sudo docker build . -t example-node-express`
+  * Pull from registry
+    * `docker pull docker.optum.com/rmyers19/example-node-express`
+  * To run after either above
+    * `sudo docker run -d -p 8001:8181 --name express-docker docker.optum.com/rmyers19/example-node-express`
 
 ### Testing
 Uses mocha for testing. Mocha executes the tests in `test.js`. 
