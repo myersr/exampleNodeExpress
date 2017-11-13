@@ -27,11 +27,11 @@ Routes are as followed
 
 ### Deployment/Running under services
 I am hoping to implement several different use cases for deployment. The hope for this repo is to create a simple lightweight app to be used for all forms of testing. I will update the options as they are added below. Feel free to fork or create a pull request if you have an option to add.
-* pm2 ~ node app manager [Docs](http://pm2.keymetrics.io/docs/usage/quick-start/)
+* pm2 ~ node app manager. [Docs](http://pm2.keymetrics.io/docs/usage/quick-start/)
   * Install/Update:
-    * npm install pm2@latest -g; pm2 update
-  * Run:
-    * The process.json file defines the application and is suitable for deployment.
+    * `npm install pm2@latest -g`; `pm2 update`
+  * Run with pm2:
+    * The process.json file defines the application and is suitable for deployment. [Docs](http://pm2.keymetrics.io/docs/usage/application-declaration/)
       * `pm2 start process.json --env production`
       * If you're using Jenkins and deploying on the same box. Add line `BUILD_ID=dontKillMe` before the start shell command to not have Jenkins destroy the process. This is not needed if you are using our enterprise version as you will be remotely connecting. 
         * ~~I don't know why but Jenkins kills every process that it creates. Seems the opposite behavior that you would expect from an automated deployment service. [More here](https://wiki.jenkins.io/display/JENKINS/ProcessTreeKiller)~~
@@ -39,8 +39,6 @@ I am hoping to implement several different use cases for deployment. The hope fo
     * To test from the cl without Jenkins:
       * `pm2 start index.js --name "test-app"`
         * This will spawn a pm2 daemon and run our app under the name "test-app"
-      * Or `pm2 start process.json --env production`
-        * This will start an instance of our app as defined in `process.json`. [Docs](http://pm2.keymetrics.io/docs/usage/application-declaration/)
 * docker
   * Either build an image locally with,
     * `sudo docker build . -t example-node-express`
