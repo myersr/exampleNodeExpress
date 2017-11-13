@@ -18,10 +18,12 @@ To test the app, run
 
 ### Configuration. 
 Very little configuration neccessary for routing and none if your are okay with the default behavior.
-If you want to change the port from the default 8181, use an environment variable.
+If you want to change the port from the default 8181 or run tests on an external url, use an environment variable.
 * set environment variable `EXP_APP_PORT` to desired port
    * i.e. `export EXP_APP_PORT=8008`
-The port is confirmed in both `npm start` and `npm test` so this works with both as long as it is exported in both or setup in your .bashrc/.bash_profile. You can easily check with `echo $EXP_APP_PORT`.
+* set env var `EXP_URL` to desired url
+   * i.e. `export EXP_URL=http://example.com` *please include http://*
+The port is confirmed in both `npm start` and `npm test` so this works with both as long as it is exported in both or setup in your .bashrc/.bash_profile. You can easily check with `echo $EXP_APP_PORT`. The URL is only checked when running `npm test` and included so you can run tests on a deployed or external app.
 
 ### Routes
 Routes are as followed
