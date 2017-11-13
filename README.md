@@ -2,8 +2,14 @@
 Looking to be a very simple express app to test deployment services or any other utilities. Includes test cases and several routes. All configuration should be handled by ENV variables.
 ____
 ### Quick-start
-Run `npm install` or `npm install --production` and then `npm start`.  
-To test, run `npm test` while the app is running. _Note that if you set the port with an environment variable, it must also be set in the tty session where you run test._
+To install the dependencies
+`npm install` or `npm install --production` 
+and then run with
+ `npm start`.
+  
+To test the app, run 
+`npm test`
+ while the app is running. The dependencies for testing will not be installed with --production. _Note that if you set the port with an environment variable, it must also be set in the tty session where you run test._
 
 ### Configuration. 
 Very little configuration neccessary for routing and none if your are okay with the default behavior.
