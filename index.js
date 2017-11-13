@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express(); 
+var bodyParser = require('body-parser');
 
 /*
  * try block to set port
@@ -32,6 +33,9 @@ try {
 
 }
 
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 /*
  * Basic get request. Root exstension that logs to console and returns a string.
  */
@@ -45,8 +49,8 @@ app.get('/', function (req,res) {
  * Example Post. @/post that logs to console and returns confirmation string
  */
 app.post('/post', function (req,res) {
-  console.log("Got posted.");
-  res.send("You made a POST");
+  console.log("Got posted.", req.body);
+  res.send("Success! You made a POST");
 })
 
 /*
@@ -64,8 +68,8 @@ app.get('/index', function (req,res) {
 })
 
 /*
- * post to /sub.
- *   This post originates from the form served from index.html
+ * get to /sub with parameters.
+ *   This get originates from the form served from index.html
  *   contains one text field: field1
  *   logs the response to console.
  */

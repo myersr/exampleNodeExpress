@@ -29,7 +29,7 @@ Routes are as followed
 '/' GET
   returns message. Has test written for status code and response body verification.
 '/post' POST
-  post that returns a confirmation string. Nothing is done with any data
+  post that returns a confirmation string. Second form on /index. Submits one data field. 
 '/index' GET
   serves /public/index.html page. This page contains a form.
 '/sub' GET
@@ -64,6 +64,7 @@ Uses mocha for testing. Mocha executes the tests in `test.js`.
 Currently only checks that
 1. '/' returns a status code of 200
 2. '/' returns the correct response body exactly.  
+3. '/post' will take a POST with populated data field and returns 200 & expected body response string.
 
 Run with `npm test` and the dependencies are saved in *devDependencies* so they will not be installed with `npm install --production`.
 

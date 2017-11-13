@@ -53,7 +53,27 @@ describe("Server root accessible", function() {
         done();
 
       })
-    });  
+    });
+
  
   });
+
+/*
+ * Testing our post request function.
+ * @ /post
+ */
+  describe("POST /post", function() {
+    it("Testing a POST submission to /post", function(done) {
+      //Submitting a post to /post with the body populated from our form: dictionary.
+      request.post({url:base_url + 'post',form:{postField:"test data"}},function(err, httpResponse, body) {
+        if(err) {
+          done(err);//On error return our error code
+        }
+        assert.equal(200, httpResponse.statusCode); //Make sure it's response code 200 OK
+        assert.equal("Success! You made a POST", body); //String match on known successful string response
+        done();
+      })
+    });
+  });
+        
 });
