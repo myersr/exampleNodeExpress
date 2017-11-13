@@ -25,6 +25,7 @@ If you want to change the port from the default 8181 or run tests on an external
    * i.e. `export EXP_URL=http://example.com` 
       * *please include http://*
       * *leave off trailing /*
+
 The port is confirmed in both `npm start` and `npm test` so this works with both as long as it is exported in both or setup in your .bashrc/.bash_profile. You can easily check with `echo $EXP_APP_PORT`. 
 The URL is only checked when running `npm test` and included so you can run tests on a deployed or external app.
 
