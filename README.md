@@ -33,7 +33,7 @@ I am hoping to implement several different use cases for deployment. The hope fo
   * Run with pm2:
     * The process.json file defines the application and is suitable for deployment. [Docs](http://pm2.keymetrics.io/docs/usage/application-declaration/)
       * `pm2 start process.json --env production`
-      * If you're using Jenkins and deploying on the same box. Add line `BUILD_ID=dontKillMe` before the start shell command to not have Jenkins destroy the process. This is not needed if you are using our enterprise version as you will be remotely connecting. 
+    * If you're using Jenkins and deploying on the same box. Add line `BUILD_ID=dontKillMe` before the start shell command to not have Jenkins destroy the process. This is not needed if you are using our enterprise version as you will be remotely connecting. 
         * ~~I don't know why but Jenkins kills every process that it creates. Seems the opposite behavior that you would expect from an automated deployment service. [More here](https://wiki.jenkins.io/display/JENKINS/ProcessTreeKiller)~~
           * I get it now, but I don't have to like it.
     * To test from the cl without Jenkins:
