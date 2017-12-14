@@ -16,7 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mysql": "^2.15.0",
+    "sonarqube-scanner": "^2.0.2"
   },
   "devDependencies": {
     "mocha": "^4.0.1",
