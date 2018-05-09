@@ -60,10 +60,10 @@ I am hoping to implement several different use cases for deployment. The hope fo
   * Either build an image locally with,
     * `sudo docker build . -t example-node-express`
   * Or pull an image from the trusted registry with
-    * `docker pull docker.optum.com/rmyers19/example-node-express`
+    * `docker pull myersr/example-node-express`
   * Then to spawn a container after a build or pull run,
-    * `sudo docker run -d -p 8001:8181 --name express-docker docker.optum.com/rmyers19/example-node-express`
-      * Suppliment `docker.optum.com.....` with whatever name you gave after -t if you built locally.
+    * `sudo docker run -d -p 8001:8181 --name express-docker myersr/example-node-express`
+      * Suppliment `myersr/examp.....` with whatever name you gave after -t if you built locally.
 
 ### Testing
 Uses mocha for testing. Mocha executes the tests in `test.js`. 
